@@ -1,43 +1,17 @@
 import 'package:flutter/material.dart';
-
-const _padding = EdgeInsets.all(16.0);
+import 'category_route.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hello Rectangle',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello Rectangle toolbar'),
-        ),
-        body: HelloRectangle(),
-      )
-    )
-  );
+  runApp(UnitConverterApp());
 }
 
-
-class HelloRectangle extends StatelessWidget {
-
+class UnitConverterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        padding: _padding,
-        color: Colors.greenAccent,
-        width: 300.0,
-        height: 400.0,
-        child: Padding(
-          padding: _padding,
-          child: Text(
-            'Hello!',
-            style: TextStyle(fontSize: 40.0),
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Unit Converter',
+      home: CategoryRoute(),
     );
   }
-
 }
